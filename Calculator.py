@@ -7,7 +7,7 @@ class Calculator:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculator")
-        self.entry = tk.Entry(self.root, width=35, borderwidth=5)
+        self.entry = tk.Entry(self.root, width=35, borderwidth=4)
         self.entry.grid(row=0, column=0, columnspan=4)
         self.create_buttons()
 
@@ -22,7 +22,8 @@ class Calculator:
 
         row_val = 1
         col_val = 0
-
+        # new text
+        
         for button in buttons:
             tk.Button(self.root, text=button, width=5, command=lambda button=button: self.click_button(button)).grid(row=row_val, column=col_val)
             col_val += 1
